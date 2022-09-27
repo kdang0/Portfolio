@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&display=swap');
+
+@keyframes rotateAnimation{
+    0% {transform:rotate(0deg);}
+    12.5% {transform:rotate(15deg);}
+    25% {transform:rotate(25deg);}
+    37.5% {transform:rotate(15deg);}
+    50% {transform:rotate(0deg);}
+    62.5%{transform:rotate(-15deg);}
+    75%{transform:rotate(-25deg);}
+    87.5%{transform:rotate(-15deg);}
+    100%{transform:rotate(0deg);}
+}
+
+@keyframes rotateAnimationContact{
+    0% {transform:rotate(0deg);}
+    12.5% {transform:rotate(7deg);}
+    25% {transform:rotate(15deg);}
+    37.5% {transform:rotate(7deg);}
+    50% {transform:rotate(0deg);}
+    62.5%{transform:rotate(-7deg);}
+    75%{transform:rotate(-15deg);}
+    87.5%{transform:rotate(-7deg);}
+    100%{transform:rotate(0deg);}
+}
+
+*{
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+
+body{
+    background-color:#F4DAB3
+}
+
+#hamburger{
+    display:none;
+}
+
+nav{
+    background-color: #FAD26C;
+}
+
+#kd{
+    color:#4F70E7;
+}
+
+h1{
+    font-size: 64px;
+    color:#FF6767;
+}
+
+.nav-icons{
+    width: 30px;
+    height: 30px;
+}
+
+.nav-items:hover #contact{
+    animation-name:rotateAnimationContact;
+    animation-duration:0.3s;
+    animation-iteration-count: 2;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.nav-items:hover > .nav-icons{
+    animation-name:rotateAnimation;
+    animation-duration: 0.3s;
+    /* animation-direction: alternate; */
+    animation-iteration-count: 2;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.nav-items{
+    transition: all .2s ease-in-out;
+}
+
+.nav-items:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.nav-p{
+    font-size:20px;
+    font-weight: 700;
+    color: #514F55;
+}
+
+#pageTitleKD{
+    font-size: 96px;
+    font-weight: 600;
+    color:#4F70E7;
+}
+
+#pageTitleSE{
+    font-size:80px;
+    font-weight: 600;
+    color:#FF6767;
+}
+
+
+
+.dropbtn{
+    background-image: url(../images/drop_down_icon.png);
+    width:10px;
+    height:10px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border:none;
+    background-color: #FAD26C;
+}
+
+@media only screen and (max-width: 590px){
+    #nav-container{
+        display:none;
+    }
+
+    h1{
+        display: none;
+    }
+
+    #pageTitleKD{
+        font-size:60px;
+    }
+
+    #pageTitleSE{
+        font-size:41px;
+    }
+    
+    #hamburger{
+        display:block;
+        margin-left:auto;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+}
+
