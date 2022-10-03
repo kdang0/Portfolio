@@ -7,6 +7,7 @@
     <title>Kevin Dang Portfolio</title>
     <link rel="stylesheet" type="text/css" href="../styles/lib.css">
     <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js" defer></script>
 </head>
 <body>
     <nav class="padding20 display-flex">
@@ -30,7 +31,15 @@
                 <p class="nav-p">contact</p>
             </div>
         </div>
-        <img id="hamburger" class="nav-icons" src="../images/hamburger.png" alt="hamburger">
+        <div class="dropdown" data-dropdown>
+            <button id="hamburger" class="nav-icons link" data-dropdown-button></button>
+            <div class="dropdownmenu display-flex col gap20 padding30" data-dropdown-menu>
+                <p><a>about</a></p>
+                <p><a>skills</a></p>
+                <p><a>projects</a></p>
+                <p><a>contact</a></p>
+            </div>
+        </div>
     </nav>
 
     <main class="display-flex col align-itemsC justify-contentC gap20 padding20">

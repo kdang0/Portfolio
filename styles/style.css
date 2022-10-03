@@ -24,6 +24,7 @@
     100%{transform:rotate(0deg);}
 }
 
+
 *{
     font-family: 'Be Vietnam Pro', sans-serif;
 }
@@ -97,6 +98,10 @@ h1{
     color:#FF6767;
 }
 
+.dropdown{
+    display:none;
+}
+
 
 
 .dropbtn{
@@ -111,6 +116,15 @@ h1{
 }
 
 @media only screen and (max-width: 590px){
+    @keyframes transitionDropDown{
+        from {transform: translateX(70px)}
+        to {transform: translateX(0px);}
+    }
+
+    @keyframes transitionOutDropDown{
+        from{transform: translateX(0px); display:block}
+        to {transform: translateX(190px); display:none}
+    }
     #nav-container{
         display:none;
     }
@@ -127,11 +141,42 @@ h1{
         font-size:41px;
     }
     
-    #hamburger{
+    .dropdown{
         display:block;
         margin-left:auto;
-        margin-bottom: auto;
-        margin-top: auto;
+    }
+
+    .dropdownmenu{
+        position:absolute;
+        right:0;
+        top:0;
+        overflow-y: auto;
+        height:100%;
+        background-color: aliceblue;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+        pointer-events: none;
+        animation-fill-mode: forwards;
+        display:none;
+        animation-name: transitionOutDropDown;
+        animation-duration: 0.5s;
+    }
+
+    .dropdown.active > #hamburger + .dropdownmenu{
+        display: block;
+        opacity:100%;
+        animation-name: transitionDropDown;
+        animation-duration: 0.5s;
+        /* width:100px; */
+    }
+
+    #hamburger{
+        display:block;
+        background-color: #FAD26C;
+        border:none;
+        background-image: url(../images/hamburger.png);
+        background-position: center;
+        background-size:contain;
+        background-repeat: no-repeat;
     }
 }
 
