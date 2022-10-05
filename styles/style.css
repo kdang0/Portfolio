@@ -1,77 +1,129 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&display=swap');
 
-@keyframes rotateAnimation{
-    0% {transform:rotate(0deg);}
-    12.5% {transform:rotate(15deg);}
-    25% {transform:rotate(25deg);}
-    37.5% {transform:rotate(15deg);}
-    50% {transform:rotate(0deg);}
-    62.5%{transform:rotate(-15deg);}
-    75%{transform:rotate(-25deg);}
-    87.5%{transform:rotate(-15deg);}
-    100%{transform:rotate(0deg);}
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    12.5% {
+        transform: rotate(15deg);
+    }
+
+    25% {
+        transform: rotate(25deg);
+    }
+
+    37.5% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    62.5% {
+        transform: rotate(-15deg);
+    }
+
+    75% {
+        transform: rotate(-25deg);
+    }
+
+    87.5% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
-@keyframes rotateAnimationContact{
-    0% {transform:rotate(0deg);}
-    12.5% {transform:rotate(7deg);}
-    25% {transform:rotate(15deg);}
-    37.5% {transform:rotate(7deg);}
-    50% {transform:rotate(0deg);}
-    62.5%{transform:rotate(-7deg);}
-    75%{transform:rotate(-15deg);}
-    87.5%{transform:rotate(-7deg);}
-    100%{transform:rotate(0deg);}
+@keyframes rotateAnimationContact {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    12.5% {
+        transform: rotate(7deg);
+    }
+
+    25% {
+        transform: rotate(15deg);
+    }
+
+    37.5% {
+        transform: rotate(7deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    62.5% {
+        transform: rotate(-7deg);
+    }
+
+    75% {
+        transform: rotate(-15deg);
+    }
+
+    87.5% {
+        transform: rotate(-7deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 
-*{
+* {
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 
-body{
-    background-color:#F4DAB3
+body {
+    background-color: #F4DAB3
 }
 
-#hamburger{
-    display:none;
+#hamburger {
+    display: none;
 }
 
-nav{
+nav {
     background-color: #FAD26C;
 }
 
-#kd{
-    color:#4F70E7;
+#kd {
+    color: #4F70E7;
 }
 
-h1{
+h1 {
     font-size: 64px;
-    color:#FF6767;
+    color: #FF6767;
 }
 
-.nav-icons{
+.nav-icons {
     width: 30px;
     height: 30px;
 }
 
-.nav-items:hover #contact{
-    animation-name:rotateAnimationContact;
-    animation-duration:0.3s;
+.nav-items:hover #contact {
+    animation-name: rotateAnimationContact;
+    animation-duration: 0.3s;
     animation-iteration-count: 2;
     animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-.nav-items:hover > .nav-icons{
-    animation-name:rotateAnimation;
+.nav-items:hover>.nav-icons {
+    animation-name: rotateAnimation;
     animation-duration: 0.3s;
     /* animation-direction: alternate; */
     animation-iteration-count: 2;
     animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-.nav-items{
+.nav-items {
     transition: all .2s ease-in-out;
 }
 
@@ -80,103 +132,162 @@ h1{
     cursor: pointer;
 }
 
-.nav-p{
-    font-size:20px;
+.nav-p {
+    font-size: 20px;
     font-weight: 700;
     color: #514F55;
 }
 
-#pageTitleKD{
+#pageTitleKD {
     font-size: 96px;
     font-weight: 600;
-    color:#4F70E7;
+    color: #4F70E7;
 }
 
-#pageTitleSE{
-    font-size:80px;
+#pageTitleSE {
+    font-size: 80px;
     font-weight: 600;
-    color:#FF6767;
+    color: #FF6767;
 }
 
-.dropdown{
-    display:none;
+.dropdown {
+    display: none;
+}
+
+
+.hidden {
+    display: none;
 }
 
 
 
-.dropbtn{
+.dropbtn {
     background-image: url(../images/drop_down_icon.png);
-    width:10px;
-    height:10px;
+    width: 10px;
+    height: 10px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    border:none;
+    border: none;
     background-color: #FAD26C;
 }
 
-@media only screen and (max-width: 590px){
-    @keyframes transitionDropDown{
-        from {transform: translateX(70px)}
-        to {transform: translateX(0px);}
+@media only screen and (max-width: 590px) {
+    @keyframes transitionDropDown {
+        from {
+            transform: translateX(70px);
+            display: block
+        }
+
+        to {
+            transform: translateX(0px)
+        }
     }
 
-    @keyframes transitionOutDropDown{
-        from{transform: translateX(0px); display:block}
-        to {transform: translateX(190px); display:none}
-    }
-    #nav-container{
-        display:none;
+    @keyframes transitionOutDropDown {
+        from {
+            transform: translateX(0px);
+        }
+
+        to {
+            transform: translateX(170px);
+            display: none;
+        }
     }
 
-    h1{
+
+
+    #nav-container {
         display: none;
     }
 
-    #pageTitleKD{
-        font-size:60px;
+    h1 {
+        display: none;
     }
 
-    #pageTitleSE{
-        font-size:41px;
-    }
-    
-    .dropdown{
-        display:block;
-        margin-left:auto;
+    #pageTitleKD {
+        font-size: 60px;
     }
 
-    .dropdownmenu{
-        position:absolute;
-        right:0;
-        top:0;
-        overflow-y: auto;
-        height:100%;
-        background-color: aliceblue;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
-        pointer-events: none;
-        animation-fill-mode: forwards;
-        display:none;
-        animation-name: transitionOutDropDown;
-        animation-duration: 0.5s;
+    #pageTitleSE {
+        font-size: 41px;
     }
 
-    .dropdown.active > #hamburger + .dropdownmenu{
+    .dropdown {
         display: block;
-        opacity:100%;
-        animation-name: transitionDropDown;
-        animation-duration: 0.5s;
-        /* width:100px; */
+        /* position:relative; */
+        margin-left: auto;
     }
 
-    #hamburger{
-        display:block;
+    #navbar {
+        position: fixed;
+        right: 0px;
+        top: 0;
+        /* overflow-y: auto; */
+        height: 100%;
+        background-color: aliceblue;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+        /* pointer-events: none; */
+        /* animation-fill-mode: forwards;
+        animation-name: transitionDropDown;
+        animation-duration: 0.5s; */
+    }
+
+    .transition-in {
+        animation-fill-mode: forwards;
+        animation-name: transitionDropDown;
+        animation-duration: 0.6s;
+    }
+
+
+    .hidden {
+        display: none;
+    }
+
+    .transition-out {
+        animation-fill-mode: forwards;
+        animation-name: transitionOutDropDown;
+        animation-duration: 0.6s;
+    }
+
+    #hamburger {
+        display: block;
         background-color: #FAD26C;
-        border:none;
+        border: none;
         background-image: url(../images/hamburger.png);
         background-position: center;
-        background-size:contain;
+        background-size: contain;
         background-repeat: no-repeat;
+        margin-left: auto;
+        transition: all .2s ease-in-out;
+    }
+
+    #exit {
+        display: block;
+        background-color: aliceblue;
+        border: none;
+        background-image: url(../images/exit.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: auto;
+    }
+
+    #hamburger:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+
+
+
+    #links a {
+        text-decoration: none;
+    }
+
+    #links {
+        list-style: none;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
     }
 }
-

@@ -31,14 +31,15 @@
                 <p class="nav-p">contact</p>
             </div>
         </div>
-        <div class="dropdown" data-dropdown>
-            <button id="hamburger" class="nav-icons link" data-dropdown-button></button>
-            <div class="dropdownmenu display-flex col gap20 padding30" data-dropdown-menu>
-                <p><a>about</a></p>
-                <p><a>skills</a></p>
-                <p><a>projects</a></p>
-                <p><a>contact</a></p>
-            </div>
+        <button id="hamburger" class="nav-icons link"></button>
+        <div tabindex="0" id="navbar" class="hidden dropdownmenu display-flex col gap20 padding20">
+            <button id="exit" class="nav-icons link"></button>
+            <ul id="links">
+                <li><a>about</a></li>
+                <li><a>skills</a></li>
+                <li><a>projects</a></li>
+                <li><a>contact</a></li>
+            </ul>
         </div>
     </nav>
 
