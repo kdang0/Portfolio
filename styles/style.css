@@ -83,7 +83,7 @@
 
 
 body {
-    background-color: #F4DAB3
+    background-color: #71649e
 }
 
 #hamburger {
@@ -96,6 +96,10 @@ nav {
 
 #kd {
     color: #4F70E7;
+}
+
+.red { 
+    background-color: #FF6767;
 }
 
 h1 {
@@ -141,7 +145,7 @@ h1 {
 #pageTitleKD {
     font-size: 96px;
     font-weight: 600;
-    color: #4F70E7;
+    color: #FAD26C;
 }
 
 #pageTitleSE {
@@ -159,7 +163,14 @@ h1 {
     display: none;
 }
 
-
+.hero-image {
+    border:black 1px solid;
+    height:50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 
 .dropbtn {
     background-image: url(../images/drop_down_icon.png);
@@ -172,7 +183,45 @@ h1 {
     background-color: #FAD26C;
 }
 
+#gif-abtme:hover{
+    cursor: pointer;
+}
+
+#png-abtme:hover{
+    cursor: pointer;
+}
+
+#contact-me{
+    transform: rotate(-35deg);
+    position: relative;
+    left: -50px;
+    top:-10px;
+}
+
+.black{
+    border:1px solid black;
+}
+
+#projects{
+    display:block;
+}
+
 @media only screen and (max-width: 590px) {
+    @keyframes transitionExitBtn {
+        0% { transform: rotate(45deg); opacity: 1;}
+        25% {transform: rotate(-45deg); opacity: 0.8;}
+        50% {transform: rotate(-180deg); opacity: 0.6;}
+        75% {transform: rotate(-270deg); opacity: 0.4;}
+        100% {transform: rotate(-360deg); opacity: 0;}
+    }
+
+    @keyframes transitionExitBtnOne {
+        0% {transform: rotate(-45deg); opacity: 0.4;}
+        25% {transform: rotate(-180deg); opacity: 0.6;}
+        50% {transform: rotate(-270deg); opacity: 0.8;}
+        100% {transform: rotate(-360deg); opacity: 1;}
+    }
+
     @keyframes transitionDropDown {
         from {
             transform: translateX(70px);
@@ -239,6 +288,16 @@ h1 {
         animation-duration: 0.6s;
     }
 
+    .transition-exit{
+        animation-name: transitionExitBtn;
+        animation-duration: 0.6s;
+    }
+
+    .transition-exit-one{
+        animation-name: transitionExitBtnOne;
+        animation-duration: 0.3s;
+    }
+    
 
     .hidden {
         display: none;
@@ -271,15 +330,19 @@ h1 {
         background-size: contain;
         background-repeat: no-repeat;
         margin-left: auto;
+        transition: all .2s ease-in-out;
+    }
+
+    #exit:hover{
+        cursor:pointer;
+        transform: scale(1.2);
     }
 
     #hamburger:hover {
         cursor: pointer;
         transform: scale(1.2);
     }
-
-
-
+    
     #links a {
         text-decoration: none;
     }

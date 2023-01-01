@@ -1,6 +1,9 @@
 const button = document.querySelector('#hamburger');
 const navbar = document.querySelector('#navbar');
-
+const exitButton = document.querySelector('#exit');
+const abtMeStatic =  document.querySelector('#png-abtme');
+const abtMeGif = document.querySelector("#gif-abtme");
+const projects = document.querySelector("#projects");
 // document.getElementById("hamburger").addEventListener('click', e => {
 //     const isDropdownButton = e.target.matches("[data-dropdown-button]")
 //     // const isDropDownMenu = e.target.matches(".dropdownmenu")
@@ -36,7 +39,25 @@ const navbar = document.querySelector('#navbar');
 // })
 
 
+abtMeStatic.addEventListener("mouseover" , () => {
+    projects.classList.remove("hidden");
+    abtMeStatic.classList.add("hidden");
+})
+
+projects.addEventListener("mouseout", () => {
+    projects.classList.add("hidden");
+    abtMeStatic.classList.remove("hidden");
+})
+
+exitButton.addEventListener("click", () => {
+    button.classList.remove("transition-exit");
+    exitButton.classList.remove("transition-exit-one");
+    navbar.classList.replace("transition-in",'transition-out');
+});
+
 button.addEventListener("click", () => {
+    button.classList.add("transition-exit");
+    exitButton.classList.add("transition-exit-one");
     if(!navbar.classList.contains("hidden")){
         navbar.classList.replace('transition-out',"transition-in");
         navbar.focus();
@@ -50,6 +71,8 @@ button.addEventListener("click", () => {
 navbar.querySelectorAll("ul")
 
 navbar.addEventListener("blur", () =>{
+    exitButton.classList.remove("transition-exit-one");
+    button.classList.remove("transition-exit");
     navbar.classList.replace("transition-in",'transition-out');
     // navbar.classList.toggle("hidden");
 });
@@ -61,5 +84,6 @@ function includeHidden() {
         navbar.classList.remove("transition-out");
     }
 }
+
 
 window.onresize = includeHidden;
